@@ -246,26 +246,28 @@ a {
     text-align: center;
 }
 
-.loader-mark {
-    width: 62px;
-    height: 62px;
-
+.loader-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
     margin: 0 auto 24px;
-
-    display: grid;
-    place-items: center;
 }
 
-.loader-mark img {
-    width: 100%;
-    height: 100%;
-
+.loader-brand img {
+    width: 52px;
+    height: 52px;
     object-fit: contain;
+    filter: drop-shadow(
+        0 0 20px rgba(103, 232, 197, 0.22)
+    );
+}
 
-    filter:
-        drop-shadow(
-            0 0 20px rgba(103, 232, 197, 0.22)
-        );
+.loader-brand span {
+    color: #f4f8fb;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .loader-line {
