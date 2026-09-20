@@ -1,32 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-```html
-<!-- =====================================================
-     STRUCTURED DATA — BPRIS
-====================================================== -->
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "BPRIS",
-    "alternateName": "Browser Privacy Risk Information Scanner",
-    "url": "https://ismanwarrior.github.io/BPRIS/",
-    "description": "BPRIS helps you understand what your browser reveals to websites through local browser privacy checks.",
-    "applicationCategory": "SecurityApplication",
-    "operatingSystem": "Web Browser",
-    "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
-    "isAccessibleForFree": true,
-    "author": {
-        "@type": "Organization",
-        "name": "BPRIS"
-    }
-}
-</script>
-```
-
 
     <meta charset="UTF-8">
 
@@ -78,6 +54,11 @@
     <meta
         name="color-scheme"
         content="dark"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
     >
 
     <!-- =====================================================
@@ -168,6 +149,29 @@
     >
 
     <!-- =====================================================
+         STRUCTURED DATA — BPRIS
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "BPRIS",
+        "alternateName": "Browser Privacy Risk Information Scanner",
+        "url": "https://ismanwarrior.github.io/BPRIS/",
+        "description": "BPRIS helps you understand what your browser reveals to websites through local browser privacy checks.",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Web Browser",
+        "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
+        "isAccessibleForFree": true,
+        "author": {
+            "@type": "Organization",
+            "name": "BPRIS"
+        }
+    }
+    </script>
+
+    <!-- =====================================================
          STYLES
     ====================================================== -->
 
@@ -182,6 +186,7 @@
     >
 
 </head>
+
 
 <body id="top">
 
@@ -215,29 +220,30 @@
         aria-hidden="true"
     >
 
-       <div class="loader-brand">
+        <div class="loader-brand">
 
-    <img src="bpris-logo.svg.png" alt="BPRIS">
+            <img
+                src="bpris-logo.svg.png"
+                alt="BPRIS"
+            >
 
-    <span>BPRIS</span>
+            <span>BPRIS</span>
 
-</div>
-
-
-            <div class="loader-line">
-
-                <span></span>
-
-            </div>
+        </div>
 
 
-            <div class="loader-meta">
+        <div class="loader-line">
 
-                <span>BPRIS</span>
+            <span></span>
 
-                <span>INITIALIZING</span>
+        </div>
 
-            </div>
+
+        <div class="loader-meta">
+
+            <span>BPRIS</span>
+
+            <span>INITIALIZING</span>
 
         </div>
 
@@ -275,7 +281,10 @@
 
                 <span class="brand-mark">
 
-                    <img src="bpris-logo.svg.png"
+                    <img
+                        src="bpris-logo.svg.png"
+                        alt=""
+                    >
 
                 </span>
 
@@ -350,8 +359,6 @@
 
             <div class="container hero-grid">
 
-
-                <!-- HERO CONTENT -->
 
                 <div class="hero-content">
 
@@ -448,8 +455,6 @@
                 </div>
 
 
-                <!-- HERO VISUAL -->
-
                 <div class="hero-visual reveal">
 
                     <div class="visual-label visual-label-top">
@@ -540,7 +545,7 @@
 
 
         <!-- =================================================
-             SEAMLESS SIGNAL MARQUEE
+             SIGNAL MARQUEE
         ================================================== -->
 
         <section
@@ -551,9 +556,6 @@
             <div class="marquee-viewport">
 
                 <div class="marquee-track">
-
-
-                    <!-- GROUP 1 -->
 
                     <div class="marquee-group">
 
@@ -575,8 +577,6 @@
 
                     </div>
 
-
-                    <!-- GROUP 2 — EXACT DUPLICATE -->
 
                     <div
                         class="marquee-group"
@@ -1061,8 +1061,6 @@
                             </div>
 
 
-                            <!-- NEW: UNKNOWN -->
-
                             <div class="overview-stat">
 
                                 <span>
@@ -1251,8 +1249,10 @@
     ====================================================== -->
 
     <script src="ui.js"></script>
-<script src="privacy-check.js"></script>
-<script src="app.js"></script>
+    <script src="privacy-check.js"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>
+```
