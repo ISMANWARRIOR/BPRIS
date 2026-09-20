@@ -1,0 +1,935 @@
+ /* =========================================================
+   BPRIS — Responsive Design
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(
+            calc(100% - 40px),
+            1080px
+        );
+    }
+
+    .hero-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(360px, 0.85fr);
+
+        gap: 55px;
+    }
+
+    .hero-title {
+        font-size: clamp(3.7rem, 6.5vw, 6rem);
+    }
+
+    .visual-shell {
+        min-height: 470px;
+    }
+
+    .orbit-three {
+        width: 360px;
+        height: 360px;
+    }
+
+    .section {
+        padding: 105px 0;
+    }
+
+    .check-card {
+        padding: 50px;
+    }
+
+    .footer-main {
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .header-inner {
+        min-height: 72px;
+    }
+
+    .main-nav > a {
+        padding-inline: 10px;
+    }
+
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+    .hero-copy {
+        max-width: 800px;
+    }
+
+    .hero-title {
+        max-width: 760px;
+    }
+
+    .hero-description {
+        max-width: 680px;
+    }
+
+    .hero-visual {
+        width: min(100%, 680px);
+        margin-inline: auto;
+    }
+
+    .visual-shell {
+        min-height: 500px;
+    }
+
+    .principles-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .principle-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .process-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .process-line {
+        display: none;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .check-card {
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        padding: 50px;
+    }
+
+    .check-content {
+        max-width: 700px;
+    }
+
+    .check-visual {
+        width: 300px;
+        height: 300px;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-cta {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom a {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION / HERO
+========================================================= */
+
+@media (max-width: 760px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .site-header {
+        position: sticky;
+    }
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .brand-copy span {
+        display: none;
+    }
+
+    .brand-copy strong {
+        font-size: 16px;
+    }
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+
+    .main-nav {
+        gap: 2px;
+    }
+
+    .main-nav > a:not(.nav-check) {
+        display: none;
+    }
+
+    .main-nav .nav-check {
+        margin-left: 0;
+
+        min-height: 42px;
+        padding: 0 13px;
+    }
+
+    .hero-section {
+        padding-top: 72px;
+    }
+
+    .hero-layout {
+        gap: 52px;
+    }
+
+    .hero-title {
+        max-width: 650px;
+
+        font-size: clamp(
+            2.7rem,
+            11vw,
+            4.6rem
+        );
+
+        line-height: 0.96;
+    }
+
+    .hero-description {
+        max-width: 92%;
+
+        margin-top: 23px;
+
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .hero-actions {
+        width: 100%;
+
+        align-items: stretch;
+        flex-direction: column;
+
+        margin-top: 28px;
+    }
+
+    .hero-actions .primary-button,
+    .hero-actions .secondary-button {
+        width: 100%;
+    }
+
+    .primary-button,
+    .secondary-button {
+        min-height: 50px;
+    }
+
+    .hero-trust {
+        justify-content: center;
+
+        gap: 9px;
+
+        margin-top: 22px;
+
+        font-size: 7px;
+    }
+
+    .trust-separator {
+        height: 10px;
+    }
+
+    .visual-shell {
+        min-height: 420px;
+
+        border-radius: 24px;
+    }
+
+    .radar-scene {
+        inset: 58px 0 50px;
+    }
+
+    .orbit-one {
+        width: 160px;
+        height: 160px;
+    }
+
+    .orbit-two {
+        width: 240px;
+        height: 240px;
+    }
+
+    .orbit-three {
+        width: 325px;
+        height: 325px;
+    }
+
+    .radar-core {
+        width: 95px;
+        height: 95px;
+    }
+
+    .core-content strong {
+        font-size: 25px;
+    }
+
+    .signal-node {
+        font-size: 6px;
+    }
+
+    .node-one {
+        left: 10%;
+    }
+
+    .node-two {
+        right: 9%;
+    }
+
+    .node-three {
+        left: 9%;
+    }
+
+    .node-four {
+        right: 8%;
+    }
+
+    .floating-data {
+        padding: 7px 8px;
+    }
+
+    .data-one {
+        left: 18%;
+    }
+
+    .data-two {
+        right: 18%;
+    }
+
+    .data-three {
+        left: 18%;
+    }
+
+    .visual-caption {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .hero-marquee {
+        margin-top: 60px;
+    }
+
+    .section {
+        padding: 85px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(
+            2.25rem,
+            10vw,
+            3.8rem
+        );
+    }
+
+    .section-heading > p {
+        font-size: 13px;
+    }
+
+    .principles-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principle-card:last-child,
+    .process-card:last-child {
+        grid-column: auto;
+    }
+
+    .principle-card {
+        min-height: 330px;
+    }
+
+    .process-card {
+        min-height: 260px;
+    }
+
+    .process-content {
+        margin-top: 45px;
+    }
+
+    .check-section {
+        padding-top: 10px;
+        padding-bottom: 95px;
+    }
+
+    .check-card {
+        min-height: auto;
+
+        gap: 40px;
+
+        padding: 30px 24px;
+
+        border-radius: 25px;
+    }
+
+    .check-content h2 {
+        font-size: clamp(
+            2.35rem,
+            10vw,
+            4rem
+        );
+    }
+
+    .check-content > p {
+        font-size: 13px;
+    }
+
+    .large-button {
+        width: 100%;
+    }
+
+    .check-visual {
+        width: 270px;
+        height: 270px;
+    }
+
+    .orbit-a {
+        width: 125px;
+        height: 125px;
+    }
+
+    .orbit-b {
+        width: 195px;
+        height: 195px;
+    }
+
+    .orbit-c {
+        width: 270px;
+        height: 270px;
+    }
+
+    .check-core {
+        width: 125px;
+        height: 125px;
+    }
+
+    .check-core strong {
+        font-size: 37px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 38px;
+
+        padding: 60px 0 45px;
+    }
+
+    .footer-cta {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 20px 0;
+    }
+
+    .footer-bottom a {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 26px);
+    }
+
+    .header-inner {
+        min-height: 64px;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+
+        border-radius: 10px;
+    }
+
+    .brand-copy strong {
+        font-size: 15px;
+    }
+
+    .main-nav .nav-check {
+        min-height: 39px;
+        padding-inline: 11px;
+
+        font-size: 11px;
+    }
+
+    .hero-section {
+        padding-top: 58px;
+    }
+
+    .hero-eyebrow {
+        gap: 7px;
+
+        margin-bottom: 20px;
+
+        font-size: 7px;
+        letter-spacing: 0.11em;
+    }
+
+    .eyebrow-line {
+        width: 28px;
+    }
+
+    .hero-title {
+        font-size: clamp(
+            2.35rem,
+            13vw,
+            3.6rem
+        );
+    }
+
+    .hero-description {
+        max-width: 100%;
+
+        font-size: 13px;
+        line-height: 1.72;
+    }
+
+    .hero-trust {
+        justify-content: flex-start;
+
+        font-size: 6px;
+    }
+
+    .visual-shell {
+        min-height: 365px;
+
+        border-radius: 21px;
+    }
+
+    .visual-topbar,
+    .visual-footer {
+        padding: 13px 14px;
+
+        font-size: 6px;
+    }
+
+    .radar-scene {
+        inset: 48px 0 43px;
+    }
+
+    .orbit-one {
+        width: 135px;
+        height: 135px;
+    }
+
+    .orbit-two {
+        width: 205px;
+        height: 205px;
+    }
+
+    .orbit-three {
+        width: 280px;
+        height: 280px;
+    }
+
+    .radar-core {
+        width: 82px;
+        height: 82px;
+    }
+
+    .core-content strong {
+        font-size: 22px;
+    }
+
+    .signal-node small {
+        font-size: 5px;
+    }
+
+    .signal-node span {
+        width: 5px;
+        height: 5px;
+    }
+
+    .floating-data {
+        padding: 6px 7px;
+    }
+
+    .floating-data span {
+        font-size: 8px;
+    }
+
+    .floating-data small {
+        font-size: 5px;
+    }
+
+    .data-one {
+        top: 15%;
+        left: 15%;
+    }
+
+    .data-two {
+        right: 15%;
+        bottom: 15%;
+    }
+
+    .data-three {
+        bottom: 17%;
+        left: 15%;
+    }
+
+    .visual-caption {
+        font-size: 7px;
+    }
+
+    .hero-marquee {
+        margin-top: 45px;
+    }
+
+    .marquee-track {
+        padding: 14px 0;
+
+        gap: 18px;
+
+        font-size: 7px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-label {
+        margin-bottom: 13px;
+
+        font-size: 7px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(
+            2rem,
+            11vw,
+            3.1rem
+        );
+    }
+
+    .section-heading > p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .principle-card,
+    .process-card {
+        padding: 23px;
+    }
+
+    .principle-card {
+        min-height: 315px;
+    }
+
+    .principle-card h3,
+    .process-content h3 {
+        font-size: 19px;
+    }
+
+    .principle-card p,
+    .process-content p {
+        font-size: 12px;
+    }
+
+    .card-link {
+        right: 23px;
+        bottom: 21px;
+
+        font-size: 6px;
+    }
+
+    .process-card {
+        min-height: 240px;
+    }
+
+    .process-content {
+        margin-top: 35px;
+    }
+
+    .check-card {
+        padding: 27px 19px;
+
+        border-radius: 22px;
+    }
+
+    .check-content h2 {
+        font-size: clamp(
+            2.1rem,
+            11vw,
+            3.2rem
+        );
+    }
+
+    .check-content > p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .security-note {
+        font-size: 6px;
+    }
+
+    .check-visual {
+        width: 235px;
+        height: 235px;
+    }
+
+    .orbit-a {
+        width: 110px;
+        height: 110px;
+    }
+
+    .orbit-b {
+        width: 170px;
+        height: 170px;
+    }
+
+    .orbit-c {
+        width: 235px;
+        height: 235px;
+    }
+
+    .check-core {
+        width: 108px;
+        height: 108px;
+    }
+
+    .check-core strong {
+        font-size: 31px;
+    }
+
+    .check-core span,
+    .check-core small {
+        font-size: 6px;
+    }
+
+    .check-scan-line {
+        width: 115px;
+    }
+
+    .footer-main {
+        padding-top: 50px;
+    }
+
+    .footer-cta h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+    .hero-title {
+        font-size: 2.15rem;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .trust-separator {
+        display: none;
+    }
+
+    .visual-shell {
+        min-height: 330px;
+    }
+
+    .orbit-three {
+        width: 245px;
+        height: 245px;
+    }
+
+    .floating-data {
+        display: none;
+    }
+
+    .signal-node {
+        display: none;
+    }
+
+    .check-visual {
+        width: 210px;
+        height: 210px;
+    }
+
+    .orbit-a {
+        width: 95px;
+        height: 95px;
+    }
+
+    .orbit-b {
+        width: 150px;
+        height: 150px;
+    }
+
+    .orbit-c {
+        width: 210px;
+        height: 210px;
+    }
+
+    .check-core {
+        width: 98px;
+        height: 98px;
+    }
+
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 760px) and (orientation: landscape) {
+
+    .hero-section {
+        padding-top: 55px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+    }
+
+    .hero-actions .primary-button,
+    .hero-actions .secondary-button {
+        width: auto;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .visual-shell {
+        min-height: 330px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+    .primary-button:hover,
+    .secondary-button:hover,
+    .principle-card:hover,
+    .process-card:hover,
+    .footer-button:hover,
+    .result-card:hover {
+        transform: none;
+    }
+
+    button,
+    .btn,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .primary-button,
+    .secondary-button,
+    .footer-button {
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .marquee-track,
+    .radar-sweep,
+    .core-ring,
+    .orbit-c,
+    .check-scan-line {
+        animation: none !important;
+    }
+
+    .reveal,
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
