@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    BPRIS — MAIN STYLESHEET
    Browser Privacy Risk Information Scanner
@@ -20,7 +21,11 @@
 
     --text: #f4f8fb;
     --text-soft: #a8b4c3;
-    --text-muted: #6f7d8e;
+
+    /* Accessibility:
+       Increased muted foreground contrast while
+       preserving the original visual character. */
+    --text-muted: #8492a2;
 
     --accent: #67e8c5;
     --accent-soft: rgba(103, 232, 197, 0.12);
@@ -3680,3 +3685,4 @@ button:focus-visible {
     }
 
 }
+```
