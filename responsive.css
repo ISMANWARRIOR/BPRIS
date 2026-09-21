@@ -851,3 +851,90 @@
     }
 }
 ```
+
+```css id="q8r2m1"
+/* =========================================================
+   BPRIS — SECTION CONTAINER ALIGNMENT FIX
+   Fixes WHY BPRIS + THE PROCESS horizontal alignment
+========================================================= */
+
+.principles-section > .container,
+.process-section > .container {
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.principles-section .section-heading,
+.process-section .section-heading {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   PRINCIPLE CARDS
+========================================================= */
+
+.principles-section .principles-grid {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PROCESS CARDS
+========================================================= */
+
+.process-section .process-grid {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .principles-section > .container,
+    .process-section > .container {
+        width: calc(100% - 32px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .principles-section > .container,
+    .process-section > .container {
+        width: calc(100% - 26px);
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .principles-section > .container,
+    .process-section > .container {
+        width: calc(100% - 22px);
+    }
+}
+```
+
