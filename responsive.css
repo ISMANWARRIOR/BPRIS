@@ -1,104 +1,311 @@
-```css
 /* =========================================================
-   BPRIS — RESPONSIVE DESIGN
-   Final override layer
-   Matches current index.html + style.css
+   BPRIS — RESPONSIVE OVERRIDE LAYER
+   Desktop alignment + tablet/mobile protection
 ========================================================= */
 
 
 /* =========================================================
-   LARGE TABLETS / SMALL LAPTOPS
+   DESKTOP — 1201px+
+   Keep the main desktop design stable and aligned
 ========================================================= */
 
-@media (max-width: 1200px) {
+@media (min-width: 1201px) {
 
     .container {
         width: min(
-            calc(100% - 40px),
+            calc(100% - 48px),
             var(--container)
         );
+        margin-inline: auto;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    .header-inner {
+        width: 100%;
+        min-height: var(--header-height);
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(460px, 1.05fr);
+        align-items: center;
+        gap: 70px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .hero-visual {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        min-height: 540px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    .radar-visual {
+        width: min(500px, 100%);
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+
+    /* ---------- HERO ACTIONS ---------- */
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: auto;
+    }
+
+
+    /* ---------- HERO BOTTOM LABELS ---------- */
+
+    .visual-label-bottom {
+        position: absolute;
+        left: 50%;
+        bottom: 28px;
+
+        width: min(500px, 100%);
+
+        transform: translateX(-50%);
+
+        display: grid;
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        align-items: center;
+        text-align: center;
+
+        gap: 8px;
+    }
+
+    .visual-label-bottom span {
+        min-width: 0;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section-heading {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(320px, 0.7fr);
+
+        align-items: end;
+        gap: 60px;
+    }
+
+
+    /* ---------- PRINCIPLES ---------- */
+
+    .principles-grid {
+        display: grid;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-grid {
+        display: grid;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+
+    /* ---------- CHECK CARD ---------- */
+
+    .check-card {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(300px, 0.75fr);
+
+        align-items: center;
+        gap: 70px;
+    }
+
+    .check-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .check-visual {
+        margin-inline: auto;
+    }
+
+
+    /* ---------- RESULTS ---------- */
+
+    .results-overview {
+        display: grid;
+        grid-template-columns:
+            minmax(260px, 0.8fr)
+            minmax(0, 1.2fr);
+
+        align-items: stretch;
+    }
+
+    .overview-stats {
+        display: grid;
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .result-sections {
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .results-section-header {
+        grid-column: 1 / -1;
+    }
+
+    .result-card.fingerprint-surface {
+        grid-column: 1 / -1;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    /*
+     * Footer is intentionally NOT redesigned here.
+     * Existing footer styling remains untouched.
+     */
+
+}
+
+
+/* =========================================================
+   LAPTOP — 1001px to 1200px
+========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+
+    .container {
+        width: calc(100% - 40px);
+        margin-inline: auto;
     }
 
     .hero-grid {
         grid-template-columns:
             minmax(0, 1fr)
-            minmax(360px, 0.85fr);
-        gap: 55px;
+            minmax(390px, 0.9fr);
+
+        gap: 50px;
     }
 
-    .hero-title {
-        font-size: clamp(
-            3.7rem,
-            6.5vw,
-            6rem
-        );
+    .hero-content {
+        max-width: 620px;
     }
 
     .hero-visual {
-        min-height: 470px;
+        min-height: 500px;
     }
 
     .radar-visual {
-        width: min(460px, 100%);
+        width: min(450px, 100%);
     }
 
-    .section {
-        padding: 105px 0;
+    .visual-label-bottom {
+        width: min(450px, 100%);
+    }
+
+    .section-heading {
+        grid-template-columns:
+            1fr 0.75fr;
+
+        gap: 40px;
     }
 
     .check-card {
-        padding: 50px;
+        grid-template-columns:
+            minmax(0, 1fr)
+            320px;
+
+        gap: 45px;
     }
+
+    .results-overview {
+        grid-template-columns:
+            280px
+            minmax(0, 1fr);
+    }
+
 }
 
 
 /* =========================================================
-   TABLETS
+   TABLET — 769px to 1000px
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (min-width: 769px) and (max-width: 1000px) {
 
-    .header-inner {
-        min-height: 72px;
-    }
-
-    .site-nav {
-        gap: 4px;
-    }
-
-    .site-nav > a {
-        padding-inline: 9px;
-    }
-
-    .hero {
-        padding-top: 80px;
+    .container {
+        width: calc(100% - 40px);
+        margin-inline: auto;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 65px;
+        gap: 55px;
     }
 
     .hero-content {
-        max-width: 800px;
-    }
-
-    .hero-title {
         max-width: 760px;
     }
 
-    .hero-description {
-        max-width: 680px;
+    .hero-visual {
+        width: min(680px, 100%);
+        min-height: 470px;
+        margin-inline: auto;
     }
 
-    .hero-visual {
-        width: min(100%, 680px);
-        margin-inline: auto;
+    .radar-visual {
+        width: min(470px, 90%);
+    }
+
+    .visual-label-bottom {
+        width: min(470px, 90%);
     }
 
     .principles-grid,
     .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
     .principle-card:last-child,
@@ -112,13 +319,12 @@
 
     .section-heading {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 20px;
     }
 
     .check-card {
         grid-template-columns: 1fr;
-        gap: 50px;
-        padding: 50px;
+        gap: 45px;
     }
 
     .check-content {
@@ -126,19 +332,8 @@
     }
 
     .check-visual {
-        width: 300px;
-        min-height: 300px;
-        height: 300px;
         margin-inline: auto;
     }
-}
-
-
-/* =========================================================
-   RESULTS — TABLET
-========================================================= */
-
-@media (max-width: 900px) {
 
     .results-overview {
         grid-template-columns: 1fr;
@@ -157,14 +352,12 @@
         grid-template-columns: 1fr;
     }
 
-    .results-section-header {
-        grid-column: auto;
-    }
 }
 
 
 /* =========================================================
-   SMALL TABLETS
+   MOBILE — 768px AND BELOW
+   Preserve the mobile version that already looks good
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -177,10 +370,7 @@
 
     .container {
         width: calc(100% - 32px);
-    }
-
-    .hero {
-        padding-top: 70px;
+        margin-inline: auto;
     }
 
     .hero-grid {
@@ -190,65 +380,32 @@
 
     .hero-content {
         width: 100%;
-    }
-
-    .hero-title {
         max-width: 100%;
-        font-size: clamp(
-            2.8rem,
-            9vw,
-            4.8rem
-        );
-        line-height: 0.98;
-    }
-
-    .hero-description {
-        max-width: 100%;
-        font-size: 14px;
-        line-height: 1.75;
-    }
-
-    .hero-actions {
-        width: 100%;
-        align-items: stretch;
-    }
-
-    /*
-     * IMPORTANT:
-     * Current HTML uses .btn, .btn-primary,
-     * .btn-secondary — not old .primary-button classes.
-     */
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        min-height: 50px;
-    }
-
-    .trust-row {
-        flex-wrap: wrap;
-        gap: 10px 18px;
     }
 
     .hero-visual {
         width: 100%;
         min-height: 430px;
+        margin-inline: auto;
     }
 
     .radar-visual {
         width: min(420px, 90vw);
+        max-width: 100%;
     }
 
     .visual-label-bottom {
-        bottom: 24px;
+        width: min(420px, 90vw);
     }
 
-    .visual-label-bottom span {
-        padding-inline: 4px;
-        font-size: 7.2px;
-        letter-spacing: 0.055em;
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
     }
 
     .principles-grid,
@@ -261,10 +418,18 @@
         grid-column: auto;
     }
 
+    .process-line {
+        display: none;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     .check-card {
         grid-template-columns: 1fr;
-        padding: 40px;
-        gap: 30px;
+        gap: 35px;
     }
 
     .check-content {
@@ -272,277 +437,32 @@
     }
 
     .check-visual {
-        min-height: 220px;
-        width: 240px;
-        height: 240px;
         margin-inline: auto;
     }
 
-    .footer-inner {
+    .results-overview {
         grid-template-columns: 1fr;
     }
 
-    .footer-links {
-        justify-content: flex-start;
+    .results-overview::after {
+        display: none;
     }
+
+    .result-sections {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 760px) {
-
-    .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .header-inner {
-        min-height: 68px;
-    }
-
-    .brand-copy span {
-        display: none;
-    }
-
-    .brand-copy strong {
-        font-size: 16px;
-    }
-
-    .brand-mark {
-        width: 38px;
-        height: 38px;
-        flex-basis: 38px;
-    }
-
-    .site-nav {
-        display: none;
-    }
-
-    .header-cta {
-        min-height: 42px;
-        padding-inline: 13px;
-        white-space: nowrap;
-    }
-
-    .hero {
-        padding-top: 65px;
-    }
-
-    .hero-grid {
-        gap: 48px;
-    }
-
-    .hero-title {
-        font-size: clamp(
-            2.7rem,
-            11vw,
-            4.6rem
-        );
-        line-height: 0.96;
-    }
-
-    .hero-description {
-        margin-top: 23px;
-        font-size: 14px;
-        line-height: 1.75;
-    }
-
-    .hero-actions {
-        width: 100%;
-        align-items: stretch;
-        flex-direction: column;
-        margin-top: 28px;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .btn {
-        min-height: 50px;
-    }
-
-    .trust-row {
-        justify-content: center;
-        gap: 9px;
-        margin-top: 22px;
-        font-size: 9px;
-    }
-
-    .hero-visual {
-        min-height: 420px;
-    }
-
-    .radar-visual {
-        width: min(390px, 88vw);
-    }
-
-    .visual-label-bottom {
-        bottom: 20px;
-        gap: 5px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .visual-label-bottom span {
-        font-size: 7px;
-    }
-
-    .signal-marquee {
-        overflow: hidden;
-    }
-
-    .section {
-        padding: 80px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(
-            2.25rem,
-            10vw,
-            3.8rem
-        );
-    }
-
-    .section-heading > p {
-        font-size: 13px;
-    }
-
-    .principle-card {
-        min-height: 280px;
-    }
-
-    .process-card {
-        min-height: 230px;
-    }
-
-    .check-section {
-        padding-top: 10px;
-        padding-bottom: 90px;
-    }
-
-    .check-card {
-        min-height: auto;
-        gap: 40px;
-        padding: 30px 24px;
-        border-radius: 25px;
-    }
-
-    .check-content h2 {
-        font-size: clamp(
-            2.35rem,
-            10vw,
-            4rem
-        );
-    }
-
-    .check-content > p {
-        font-size: 13px;
-    }
-
-    .check-content .btn {
-        width: 100%;
-    }
-
-    .check-visual {
-        width: 270px;
-        height: 270px;
-        min-height: 270px;
-    }
-
-    .results-dashboard {
-        padding: 14px;
-    }
-
-    .results-overview {
-        padding: 22px;
-    }
-
-    .overview-stats {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-    .results-actions {
-        width: 100%;
-    }
-
-    .results-actions .btn {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 480px) {
 
     .container {
         width: calc(100% - 26px);
-    }
-
-    .header-inner {
-        min-height: 64px;
-    }
-
-    .brand {
-        gap: 9px;
-    }
-
-    .brand-mark {
-        width: 36px;
-        height: 36px;
-        flex-basis: 36px;
-        border-radius: 10px;
-    }
-
-    .brand-copy strong {
-        font-size: 15px;
-    }
-
-    .header-cta {
-        min-height: 39px;
-        padding-inline: 11px;
-        font-size: 11px;
-    }
-
-    .hero {
-        padding-top: 58px;
-    }
-
-    .hero-title {
-        font-size: clamp(
-            2.35rem,
-            13vw,
-            3.6rem
-        );
-    }
-
-    .hero-description {
-        max-width: 100%;
-        font-size: 13px;
-    }
-
-    .hero-actions {
-        gap: 10px;
-    }
-
-    .trust-row {
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 7px;
     }
 
     .hero-visual {
@@ -554,171 +474,13 @@
     }
 
     .visual-label-bottom {
-        bottom: 14px;
-        row-gap: 7px;
-    }
-
-    .visual-label-bottom span {
-        padding-inline: 2px;
-        font-size: 6.5px;
-        letter-spacing: 0.035em;
-    }
-
-    .marquee-group {
-        gap: 11px;
-        padding: 12px 0;
-    }
-
-    .marquee-group span {
-        font-size: 8px;
-        letter-spacing: 0.09em;
-    }
-
-    .marquee-group i {
-        font-size: 8px;
-    }
-
-    .section {
-        padding: 70px 0;
-    }
-
-    .principle-card {
-        min-height: 250px;
-        padding: 26px;
-    }
-
-    .process-card {
-        min-height: 220px;
-        padding: 26px;
-    }
-
-    .check-card {
-        padding: 26px 20px;
-        border-radius: 22px;
-    }
-
-    .check-content h2 {
-        font-size: clamp(
-            2.2rem,
-            11vw,
-            3.3rem
-        );
-    }
-
-    .check-content > p {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    .check-visual {
-        width: 230px;
-        height: 230px;
-        min-height: 230px;
-    }
-
-    .results-dashboard {
-        padding: 10px;
-    }
-
-    .results-overview {
-        padding: 18px;
+        width: min(330px, 86vw);
     }
 
     .overview-stats {
         grid-template-columns: 1fr 1fr;
     }
 
-    .overview-stat {
-        min-height: 72px;
-        padding: 11px;
-    }
-
-    .overview-stat span {
-        font-size: 7px;
-    }
-
-    .overview-stat strong {
-        font-size: 19px;
-    }
-
-    .result-card {
-        min-height: 0;
-        padding: 18px 17px 17px 19px;
-        border-radius: 16px;
-    }
-
-    .result-card-header {
-        gap: 10px;
-        margin-bottom: 12px;
-    }
-
-    .result-card-header h3 {
-        font-size: 14px;
-    }
-
-    .result-card-header .result-status {
-        padding: 5px 7px;
-        font-size: 6.5px;
-    }
-
-    .result-card-value {
-        margin-bottom: 12px;
-        font-size: 10.5px;
-    }
-
-    .result-card-description {
-        padding-top: 12px;
-        font-size: 10.5px;
-    }
-
-    .result-card-top {
-        grid-template-columns:
-            40px
-            minmax(0, 1fr);
-    }
-
-    .result-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .result-value {
-        grid-column: 2;
-        max-width: none;
-        text-align: left;
-    }
-
-    .results-section-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .results-actions {
-        margin-top: 20px;
-    }
-
-    .results-actions .btn {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .result-card.fingerprint-surface {
-        grid-column: auto;
-    }
-
-    .disclaimer-card {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 14px 0;
-        gap: 5px;
-    }
 }
 
 
@@ -730,15 +492,6 @@
 
     .container {
         width: calc(100% - 22px);
-    }
-
-    .header-cta {
-        padding-inline: 9px;
-        font-size: 10px;
-    }
-
-    .hero-title {
-        font-size: 2.15rem;
     }
 
     .hero-visual {
@@ -756,6 +509,7 @@
     .overview-stats {
         grid-template-columns: 1fr;
     }
+
 }
 
 
@@ -763,20 +517,12 @@
    LANDSCAPE MOBILE
 ========================================================= */
 
-@media (max-width: 760px) and (orientation: landscape) {
-
-    .hero {
-        padding-top: 55px;
-    }
+@media (max-width: 768px) and (orientation: landscape) {
 
     .hero-grid {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 25px;
-    }
-
-    .hero-title {
-        font-size: 3rem;
     }
 
     .hero-actions {
@@ -789,17 +535,9 @@
     }
 
     .hero-visual {
-        width: 100%;
         min-height: 330px;
     }
 
-    .radar-visual {
-        width: min(330px, 80vw);
-    }
-
-    .section {
-        padding: 65px 0;
-    }
 }
 
 
@@ -823,11 +561,6 @@
         -webkit-tap-highlight-color: transparent;
     }
 
-    .btn,
-    .header-cta {
-        -webkit-user-select: none;
-        user-select: none;
-    }
 }
 
 
@@ -839,102 +572,20 @@
 
     .marquee-track,
     .radar-sweep,
-    .reveal {
+    .radar-node,
+    .mini-sweep,
+    .overview-score,
+    .overview-score::before,
+    .result-card,
+    .brand-mark img {
         animation: none !important;
-        transition: none !important;
     }
 
     .reveal,
     .reveal-on-scroll {
         opacity: 1 !important;
         transform: none !important;
+        transition: none !important;
     }
+
 }
-```
-
-```css id="q8r2m1"
-/* =========================================================
-   BPRIS — SECTION CONTAINER ALIGNMENT FIX
-   Fixes WHY BPRIS + THE PROCESS horizontal alignment
-========================================================= */
-
-.principles-section > .container,
-.process-section > .container {
-    width: min(
-        calc(100% - 48px),
-        var(--container)
-    );
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-.principles-section .section-heading,
-.process-section .section-heading {
-    width: 100%;
-    max-width: 100%;
-}
-
-
-/* =========================================================
-   PRINCIPLE CARDS
-========================================================= */
-
-.principles-section .principles-grid {
-    width: 100%;
-}
-
-
-/* =========================================================
-   PROCESS CARDS
-========================================================= */
-
-.process-section .process-grid {
-    width: 100%;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .principles-section > .container,
-    .process-section > .container {
-        width: calc(100% - 32px);
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .principles-section > .container,
-    .process-section > .container {
-        width: calc(100% - 26px);
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 360px) {
-
-    .principles-section > .container,
-    .process-section > .container {
-        width: calc(100% - 22px);
-    }
-}
-```
-
